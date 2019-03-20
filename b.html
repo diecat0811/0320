@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>CHECK YOUR RESULT</h2>
+
+<p>Please input your grade</p>
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var grade, result;
+
+  // Get the value of the input field with id="numb"
+  grade = document.getElementById("numb").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (grade>60) {
+    result = "PASSED";
+  } else {
+    result = "FAILED";
+  }
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html> 
