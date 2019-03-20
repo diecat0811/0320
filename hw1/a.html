@@ -13,40 +13,24 @@ y:<input type="number"id="p2"value=1> <br>
 <p id="demo2"></p>
 <p id="demo3"></p>
 <p id="demo4"></p>
-
+<button type="button" onclick="myFunction()">Submit</button>
+<button type="button" onclick="myFunction1()">Clean</button>
 <script>
-function myFunction1(x,y) {
-var x,y
+function myFunction(x,y) {
+var x,y,z,z1,z2,z3
 x=parseFloat(document.getElementById("p1").value);
 y=parseFloat(document.getElementById("p2").value);
-  return x+y;
+   z=x+y;z1=x-y;z2=x*y;z3=x/y;
+  document.getElementById("demo1").innerHTML = "x+y="+ z;
+  document.getElementById("demo2").innerHTML = "x-y="+ z1;
+  document.getElementById("demo3").innerHTML = "x*y="+ z2;
+  document.getElementById("demo4").innerHTML = "x/y="+ z3;
 }
-function myFunction2(x, y) {
-  var x,y
-x=parseFloat(document.getElementById("p1").value);
-y=parseFloat(document.getElementById("p2").value);
-  return x-y;
-}
-function myFunction3(x, y) {
- var x,y
-x=parseFloat(document.getElementById("p1").value);
-y=parseFloat(document.getElementById("p2").value);
-  return x*y;
-}
-function myFunction4(x,y) {
-  var x,y
-x=parseFloat(document.getElementById("p1").value);
-y=parseFloat(document.getElementById("p2").value);
-  return x/y;
+function myFunction1() {
+document.setElementById("p1").value=2;
+document.setElementById("p2").value=2;
 }
 
-document.getElementById("demo1").innerHTML = "x+y="+myFunction1(p1, p2);
-
-document.getElementById("demo2").innerHTML = "x-y="+myFunction2(p1, p2);
-
-document.getElementById("demo3").innerHTML = "x*y="+myFunction3(p1, p2);
-
-document.getElementById("demo4").innerHTML = "x/y="+myFunction4(p1, p2);
 </script>
 </body>
 </html>
