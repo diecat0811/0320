@@ -1,36 +1,50 @@
-<!DOCTYPE html>
 <html>
+<head>
+<h2>計算機</h2>
+</head>
 <body>
+<input type="number"id="data1"value=0> 
+<input type="number"id="data2"value=0> 
 
-<h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation, and returns the result:</p>
-<form>
-x:<input type="number" id="p1"value=1> <br>
-y:<input type="number"id="p2"value=1> <br>
-</form>
-<p id="demo1"></p>
-<p id="demo2"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
-<button type="button" onclick="myFunction()">Submit</button>
-<button type="button" onclick="myFunction1()">Clean</button>
+<button type="button" onclick="document.getElementById('ans').innerHTML = add()">+</button>
+<button type="button" onclick="document.getElementById('ans').innerHTML = sub()">-</button>
+<button type="button" onclick="document.getElementById('ans').innerHTML = mul()">*</button>
+<button type="button" onclick="document.getElementById('ans').innerHTML = div()">/</button>
+<button type="button" onclick="document.getElementById('ans').innerHTML = clr()">clear</button>
+    <p>ANS:</p>
+    <p id="ans"></p>
 <script>
-function myFunction(x,y) {
-var x,y,z,z1,z2,z3
-x=parseFloat(document.getElementById("p1").value);
-y=parseFloat(document.getElementById("p2").value);
-   z=x+y;z1=x-y;z2=x*y;z3=x/y;
-  document.getElementById("demo1").innerHTML = "x+y="+ z;
-  document.getElementById("demo2").innerHTML = "x-y="+ z1;
-  document.getElementById("demo3").innerHTML = "x*y="+ z2;
-  document.getElementById("demo4").innerHTML = "x/y="+ z3;
-}
-function myFunction1() {
-document.setElementById("p1").value=2;
-document.setElementById("p2").value=2;
-}
-
+    function add() {
+            var p1 = parseFloat(document.getElementById("data1").value);
+            var p2 = parseFloat(document.getElementById("data2").value);
+            return p1 + p2;
+        }
+        function sub() {
+            var p1 = parseFloat(document.getElementById("data1").value);
+            var p2 = parseFloat(document.getElementById("data2").value);
+            return p1 - p2;
+        }
+        function mul() {
+            var p1 = parseFloat(document.getElementById("data1").value);
+            var p2 = parseFloat(document.getElementById("data2").value);
+            return p1 * p2;
+        }
+        function div() {
+            var p1 = parseFloat(document.getElementById("data1").value);
+            var p2 = parseFloat(document.getElementById("data2").value);
+            return p1 / p2;
+        }
+        function clr() {
+            document.getElementById("data1").value = 0;
+            document.getElementById("data2").value = 0;
+            return 0;
+        }
+        document.getElementById("ans").innerHTML = add();
+        document.getElementById("ans").innerHTML = sub();
+        document.getElementById("ans").innerHTML = mul();
+        document.getElementById("ans").innerHTML = div();
+        document.getElementById("ans").innerHTML = clr();
 </script>
 </body>
 </html>
